@@ -1,0 +1,16 @@
+header{
+    text-align          : center;
+    background-color    : tomato;
+}
+
+.divDefault {
+    text-align  : center;
+    color       : blue;
+    font-size   : 32px;
+}
+
+.inputDefault{
+    background-color    : black;
+    text-align          : left;
+    color               : yellow;
+}
