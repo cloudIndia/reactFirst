@@ -13,8 +13,9 @@ class Header extends Component
     }
     
     inputTextFiels = (event) =>{
-        console.log(event.target.value);
+        //console.log(event.target.value);
         this.setState({search:event.target.value?event.target.value : "Enter the text" })
+        this.props.searchData(event.target.value)
     }
 
     toggleLogoName = (event) =>{

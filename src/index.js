@@ -25,14 +25,23 @@ class ThirdJourney extends Component{
     super(props);
 
     this.state = {
-      news : JSON
+      news : JSON,
+      filterd : JSON
     }
+  }
+  
+  filterNews =(keyWord)=>{
+        console.log("--->",keyWord)
+        let filterd = this.state.news.filter((data)=>{
+          return data.title.toLowerCase().indexOf(keyWord.toLowerCase()) > -1
+        })
+        this.setState({filterd})
   }
   render(){
     return (
       <div>
-        <Header/>
-        <NewsList newsValue={this.state.news}/>
+        <Header searchData={(data)=>{this.filterNews(data)}}/>
+        <NewsList newsValue={this.state.filterd}/>
         <FirstJourney/>
         <SecondJourney/>
       </div>
